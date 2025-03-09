@@ -97,7 +97,7 @@ export default function Navbar() {
           {/* User Profile - show on both mobile and desktop, but align differently */}
           <div className="flex items-center space-x-2 font-medium">
             <span className="hidden sm:inline text-gray-700">John</span>
-            <User className="h-6 w-8 text-black pr-1" />
+            <UserCircle className="h-6 w-8 text-black pr-1" />
           </div>
         </div>
       </div>
