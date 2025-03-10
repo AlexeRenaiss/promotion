@@ -2,8 +2,6 @@ import RewardsHeroSection from "./RewardsHeroSection";
 import Navbar from "./Navbar";
 import RewardSection from "./RewardSection";
 import MoreWayToEarn from "./MoreWayToEarn";
-import RewardSectionMobile from "./RewardSectionMobile";
-import RewardsHeroSectionMobile from "./RewardsHeroSectionMobile";
 
 export default function RewardPage() {
   return (
@@ -12,16 +10,13 @@ export default function RewardPage() {
 
       <Navbar />
       {/* hero section */}
-
-      {/* <RewardsHeroSection /> */}
-      <RewardsHeroSectionMobile />
+      <RewardsHeroSection />
 
       {/* Rewards Section */}
-      <RewardSectionMobile />
-      {/* <RewardSection /> */}
+      <RewardSection />
 
       {/* More Ways to Earn Section */}
-      {/* <MoreWayToEarn /> */}
+      <MoreWayToEarn />
     </main>
   );
 }
