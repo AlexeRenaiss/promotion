@@ -1,16 +1,16 @@
 export default function RewardsHeroSection() {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[300px] bg-primary text-white mt-14">
-      <h2 className="text-lg font-medium mt-6 pt-8">Rewards</h2>
+      <h2 className="text-lg font-medium mt-14 mb-4">Rewards</h2>
 
       {/* Light Background to Keep the Bottom Cut Effect */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gray-100"></div>
 
       {/* Full-Width Card with Padding & More Bottom White Space */}
-      <div className="relative mt-6 bg-white shadow-lg rounded-lg p-10 justify-center flex flex-col items-center w-full max-w-6xl mx-4 sm:mx-6 lg:mx-10 px-4 sm:px-6 lg:px-10 min-h-[350px]">
+      <div className="relative mt-6 bg-white shadow-lg rounded-lg p-10 justify-center flex flex-col  items-center w-full max-w-6xl mx-4 sm:mx-6 lg:mx-10 px-4 sm:px-6 lg:px-10 min-h-[350px]">
         {/* Background Image - Fixed implementation */}
         <div
-          className="absolute inset-0 z-0 opacity-50"
+          className="absolute inset-0 z-0 opacity-50 mx-4"
           style={{
             backgroundImage: "url('/images/hero.svg')",
             backgroundPosition: "center",

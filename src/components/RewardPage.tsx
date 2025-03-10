@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import RewardsHeroSection from "./RewardsHeroSection";
 import Navbar from "./Navbar";
 import RewardSection from "./RewardSection";

@@ -76,7 +76,7 @@ export default function MoreWayToEarn() {
   };
 
   return (
-    <div className="mx-auto px-4 py-12 bg-white w-full">
+    <div className="mx-auto px-4 py-16 bg-white w-full">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 text-black font-medium">
           <h2 className="text-2xl  mb-2">More ways to earn</h2>

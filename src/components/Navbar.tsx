@@ -74,9 +74,9 @@ export default function Navbar() {
             </Link>
             <Link
               href="/quiz"
-              className={`px-4 py-2 rounded-full ${
+              className={`px-4 py-2 rounded-[10px] ${
                 pathname === "/quiz"
-                  ? "bg-pink-50 text-pink-600"
+                  ? "bg-pink-50 text-primary"
                   : "text-gray-700 hover:text-gray-900"
               } transition-colors`}
             >
@@ -84,9 +84,9 @@ export default function Navbar() {
             </Link>
             <Link
               href="/contact"
-              className={`px-4 py-2 rounded-full ${
+              className={`px-4 py-2 rounded-[10px] ${
                 pathname === "/contact"
-                  ? "bg-pink-50 text-pink-600"
+                  ? "bg-pink-50 text-primary"
                   : "text-gray-700 hover:text-gray-900"
               } transition-colors`}
             >
@@ -95,7 +95,7 @@ export default function Navbar() {
           </div>
 
           {/* User Profile - show on both mobile and desktop, but align differently */}
-          <div className="flex items-center space-x-2 font-medium">
+          <div className="flex items-center space-x-2 font-medium cursor-pointer">
             <span className="hidden sm:inline text-gray-700">John</span>
             <UserCircle className="h-6 w-8 text-black pr-1" />
           </div>

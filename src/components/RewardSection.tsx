@@ -3,7 +3,7 @@ import CustomButton from "./Button";
 
 export default function RewardSection() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 mt-8">
+    <div className="max-w-6xl mx-auto px-4 py-12 my-8 ">
       <div className="text-center mb-8">
         <h2 className="text-2xl font-medium mb-2 text-black">Rewards</h2>
         <p className="text-black font-medium">
