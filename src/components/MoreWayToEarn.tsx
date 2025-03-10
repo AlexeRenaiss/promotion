@@ -9,17 +9,17 @@ export default function MoreWayToEarn() {
     {
       id: 1,
       image: "/images/earn1.png",
-      title: "QUIZ: Play Product Matchmaker",
+      title: "QUIZ: Play P&G Product Matchmaker",
     },
     {
       id: 2,
       image: "/images/earn2.png",
-      title: "QUIZ: Play Product Matchmaker",
+      title: "QUIZ: Play P&G Product Matchmaker",
     },
     {
       id: 3,
       image: "/images/earn3.png",
-      title: "QUIZ: Play Product Matchmaker",
+      title: "QUIZ: Play P&G Product Matchmaker",
     },
     { id: 4, image: "/images/earn1.png", title: "QUIZ: Food Quiz Challenge" },
     {
