@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "Avenir";
-  src: url("/fonts/AvenirLTProBlack") format("otf"),
+  src: url("/fonts/AvenirLTProBlack.otf") format("otf"),
     url("/fonts/AvenirLTProBlack.otf") format("otf");
   font-weight: normal;
   font-style: normal;
