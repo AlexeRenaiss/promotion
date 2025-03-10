@@ -38,7 +38,7 @@ const Footer = () => {
           </Link>
           <Link href="#" aria-label="TikTok">
             <Image
-              src="/images/icon-tiktok.png"
+              src="/images/tiktok.png"
               alt="TikTok"
               width={24}
               height={24}
