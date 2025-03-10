@@ -37,12 +37,7 @@ const Footer = () => {
             <Instagram size={24} />
           </Link>
           <Link href="#" aria-label="TikTok">
-            <Image
-              src="/images/icon-tiktok.svg"
-              alt="TikTok"
-              width={24}
-              height={24}
-            />
+            <Image src="/icon-tiktok.svg" alt="TikTok" width={24} height={24} />
           </Link>
         </div>
 
