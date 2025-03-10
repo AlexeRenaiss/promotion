@@ -9,7 +9,7 @@ export default function RewardSection() {
     <div className="max-w-6xl mx-auto px-4 py-12 md:my-8 ">
       <div className="text-center text-black mb-8">
         <h2 className="text-2xl font-bold mb-2 ">Rewards</h2>
-        <p className="font-extralight">
+        <p className="font-light">
           Redeem the points you've earned for rewards you'll love.
         </p>
       </div>
