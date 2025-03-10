@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Facebook, Instagram, MessageCircle } from "lucide-react";
+import Image from "next/image";
+import { Facebook, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -35,13 +36,13 @@ const Footer = () => {
           <Link href="#" aria-label="Instagram">
             <Instagram size={24} />
           </Link>
-          <Link
-            href="#"
-            aria-label="TikTok"
-            className="flex items-center justify-center"
-          >
-            {/* Lucide doesn't have a TikTok icon, so we'll use a simplified version with MessageCircle */}
-            <MessageCircle size={24} />
+          <Link href="#" aria-label="TikTok">
+            <Image
+              src="/images/icon-tiktok.svg"
+              alt="TikTok"
+              width={24}
+              height={24}
+            />
           </Link>
         </div>
 
