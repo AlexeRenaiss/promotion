@@ -26,8 +26,8 @@ export default function RewardsHeroSection() {
 
         {/* Content with consistent sizing across devices */}
         <div className="relative z-10 text-center pt-4">
-          <p className="text-2xl md:text-3xl font-medium text-black">25</p>
-          <p className="text-gray-600 text-lg md:text-xl font-medium pt-2">
+          <p className="text-2xl md:text-5xl font-medium text-black">25</p>
+          <p className="text-gray-600 text-lg md:text-2xl font-medium pt-2">
             Available Balance
           </p>
         </div>

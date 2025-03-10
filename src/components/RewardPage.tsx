@@ -13,15 +13,15 @@ export default function RewardPage() {
       <Navbar />
       {/* hero section */}
 
-      <RewardsHeroSection />
-      {/* <RewardsHeroSectionMobile /> */}
+      {/* <RewardsHeroSection /> */}
+      <RewardsHeroSectionMobile />
 
       {/* Rewards Section */}
-      {/* <RewardSectionMobile /> */}
-      <RewardSection />
+      <RewardSectionMobile />
+      {/* <RewardSection /> */}
 
       {/* More Ways to Earn Section */}
-      <MoreWayToEarn />
+      {/* <MoreWayToEarn /> */}
     </main>
   );
 }
