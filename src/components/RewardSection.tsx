@@ -57,7 +57,7 @@ export default function RewardSection() {
               alt="Health Care Favorites Bundle"
               width={384}
               height={192}
-              className="w-full object-contain rounded-lg"
+              className="w-full object-contain rounded-lg "
             />
           </div>
           <div className="p-4 text-center font-bold text-black">
