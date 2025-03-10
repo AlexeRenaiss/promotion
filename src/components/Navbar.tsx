@@ -21,6 +21,7 @@ export default function Navbar() {
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500"
             >
               <span className="sr-only">Open main menu</span>
+
               <svg
                 className={`${isOpen ? "hidden" : "block"} h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -96,9 +97,11 @@ export default function Navbar() {
 
           {/* User Profile - show on both mobile and desktop, but align differently */}
           <div className="flex items-center space-x-2 font-medium cursor-pointer">
-            <span className="hidden sm:inline text-gray-700">John</span>
-            <User className="h-6 w-8 text-black pr-1 block sm:hidden" />
-            <UserCircle className="h-6 w-8 text-black pr-1 hidden sm:block" />
+            {/* <User className="h-6 w-8 text-black pr-1 block sm:hidden" /> */}
+            <div className="items-center justify-center ">
+              <UserCircle className="h-6 w-8 text-black pr-1  sm:block" />
+              <span className="sm:block text-black text-xs">John</span>
+            </div>
           </div>
         </div>
       </div>

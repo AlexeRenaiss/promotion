@@ -1,5 +1,5 @@
-import RewardPage from "../components/RewardPage";
+import HomePage from "../components/Home";
 
 export default function Home() {
-  return <RewardPage />;
+  return <HomePage />;
 }

@@ -78,9 +78,11 @@ export default function MoreWayToEarn() {
   return (
     <div className="mx-auto px-4 py-16 bg-white w-full">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-8 text-black font-medium">
-          <h2 className="text-2xl  mb-2">More ways to earn</h2>
-          <p>Earn points with each one of these quick quizzes.</p>
+        <div className="text-center mb-8 text-black ">
+          <h2 className="text-2xl  mb-2 font-bold">More ways to earn</h2>
+          <p className="font-extralight">
+            Earn points with each one of these quick quizzes.
+          </p>
         </div>
 
         <div className="relative">
@@ -106,7 +108,7 @@ export default function MoreWayToEarn() {
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
-                <div className="p-4 text-center font-medium text-[#171D52]">
+                <div className="p-4 text-center font-bold text-[#171D52]">
                   <div>{card.title}</div>
                 </div>
               </div>
@@ -114,10 +116,11 @@ export default function MoreWayToEarn() {
           </div>
 
           {/* Navigation Arrows */}
+          {/* Navigation Arrows - Hide on mobile */}
           {currentIndex > 0 && (
             <button
               onClick={handlePrevious}
-              className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden md:block"
               aria-label="Previous image"
               disabled={isTransitioning}
             >
@@ -128,7 +131,7 @@ export default function MoreWayToEarn() {
           {currentIndex < quizCards.length - 1 && (
             <button
               onClick={handleNext}
-              className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden md:block"
               aria-label="Next image"
               disabled={isTransitioning}
             >

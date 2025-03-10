@@ -6,10 +6,10 @@ import React from "react";
 export default function RewardSection() {
   const [showAll, setShowAll] = React.useState(false);
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 my-8 ">
-      <div className="text-center mb-8">
-        <h2 className="text-2xl font-medium mb-2 text-black">Rewards</h2>
-        <p className="text-black font-medium">
+    <div className="max-w-6xl mx-auto px-4 py-12 md:my-8 ">
+      <div className="text-center text-black mb-8">
+        <h2 className="text-2xl font-bold mb-2 ">Rewards</h2>
+        <p className="font-extralight">
           Redeem the points you've earned for rewards you'll love.
         </p>
       </div>
@@ -26,7 +26,7 @@ export default function RewardSection() {
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
-          <div className="p-4 text-center font-medium text-black">
+          <div className="p-4 text-center font-bold text-black">
             <div className="mb-1 ">25 Points</div>
             <div>Monthly Sweepstakes</div>
           </div>
@@ -43,7 +43,7 @@ export default function RewardSection() {
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
-          <div className="p-4 text-center font-medium text-black">
+          <div className="p-4 text-center font-bold text-black">
             <div className="mb-1">25 Points</div>
             <div>Family Care Favorites Bundle</div>
           </div>
@@ -60,7 +60,7 @@ export default function RewardSection() {
               className="w-full h-full object-cover rounded-lg"
             />
           </div>
-          <div className="p-4 text-center font-medium text-black">
+          <div className="p-4 text-center font-bold text-black">
             <div className="mb-1">25 Points</div>
             <div>Family Care Favorites Bundle</div>
           </div>
@@ -78,7 +78,7 @@ export default function RewardSection() {
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
-              <div className="p-4 text-center font-medium text-black">
+              <div className="p-4 text-center font-bold text-black">
                 <div className="mb-1 ">25 Points</div>
                 <div>Monthly Sweepstakes</div>
               </div>
@@ -95,7 +95,7 @@ export default function RewardSection() {
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
-              <div className="p-4 text-center font-medium text-black">
+              <div className="p-4 text-center font-bold text-black">
                 <div className="mb-1">25 Points</div>
                 <div>Family Care Favorites Bundle</div>
               </div>
@@ -112,7 +112,7 @@ export default function RewardSection() {
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
-              <div className="p-4 text-center font-medium text-black">
+              <div className="p-4 text-center font-bold text-black">
                 <div className="mb-1">25 Points</div>
                 <div>Family Care Favorites Bundle</div>
               </div>
@@ -128,7 +128,7 @@ export default function RewardSection() {
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
-              <div className="p-4 text-center font-medium text-black">
+              <div className="p-4 text-center font-bold text-black">
                 <div className="mb-1 ">25 Points</div>
                 <div>Monthly Sweepstakes</div>
               </div>
@@ -145,7 +145,7 @@ export default function RewardSection() {
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
-              <div className="p-4 text-center font-medium text-black">
+              <div className="p-4 text-center font-bold text-black">
                 <div className="mb-1">25 Points</div>
                 <div>Family Care Favorites Bundle</div>
               </div>
@@ -162,7 +162,7 @@ export default function RewardSection() {
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
-              <div className="p-4 text-center font-medium text-black">
+              <div className="p-4 text-center font-bold text-black">
                 <div className="mb-1">25 Points</div>
                 <div>Family Care Favorites Bundle</div>
               </div>
