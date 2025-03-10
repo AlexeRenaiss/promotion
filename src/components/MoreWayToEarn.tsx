@@ -25,7 +25,7 @@ export default function MoreWayToEarn() {
     {
       id: 5,
       image: "/images/earn2.png",
-      title: "QUIZ: Wellness Knowledge Test",
+      title: "QUIZ: Wellness Knowledge Finder",
     },
     { id: 6, image: "/images/earn3.png", title: "QUIZ: Health Products Quiz" },
   ];
