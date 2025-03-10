@@ -96,12 +96,9 @@ export default function Navbar() {
           </div>
 
           {/* User Profile - show on both mobile and desktop, but align differently */}
-          <div className="flex items-center space-x-2 font-medium cursor-pointer">
-            {/* <User className="h-6 w-8 text-black pr-1 block sm:hidden" /> */}
-            <div className="items-center justify-center ">
-              <UserCircle className="h-6 w-8 text-black pr-1  sm:block" />
-              <span className="sm:block text-black text-xs">John</span>
-            </div>
+          <div className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-2 space-y-1 sm:space-y-0 font-medium cursor-pointer">
+            <UserCircle className="h-6 w-8 text-black pr-1 sm:pr-0" />
+            <span className="text-black text-[10px] sm:text-sm">John</span>
           </div>
         </div>
       </div>
