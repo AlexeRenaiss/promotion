@@ -1,7 +1,7 @@
 export default function RewardsHeroSection() {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[300px] bg-primary text-white mt-14">
-      <h2 className="text-lg md:text-xl font-medium mt-14 mb-4">Rewards</h2>
+      <h2 className="text-lg md:text-3xl font-medium mt-14 mb-4">Rewards</h2>
 
       {/* Light Background to Keep the Bottom Cut Effect */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gray-100"></div>
@@ -25,9 +25,9 @@ export default function RewardsHeroSection() {
         ></div>
 
         {/* Content with consistent sizing across devices */}
-        <div className="relative z-10 text-center pt-4">
-          <p className="text-2xl md:text-5xl font-medium text-black">25</p>
-          <p className="text-gray-600 text-lg md:text-2xl font-medium pt-2">
+        <div className="relative z-10 text-center text-black pt-4">
+          <p className="text-2xl md:text-5xl font-medium ">25</p>
+          <p className=" text-lg md:text-2xl font-medium pt-3">
             Available Balance
           </p>
         </div>

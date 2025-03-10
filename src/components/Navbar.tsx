@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white border-b border-gray-100 fixed w-full top-0 z-50">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-0">
         <div className="flex justify-between h-16 items-center">
           {/* Mobile menu button - moved to the left */}
           <div className="block sm:hidden">
