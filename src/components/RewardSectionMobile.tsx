@@ -1,7 +1,7 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
+import { Button } from "../components/ui/button";
 import { Gift, Coffee, ShoppingBag, ShoppingCart } from "lucide-react";
 
 const rewards = [
@@ -42,7 +42,7 @@ export default function Home() {
         <div className="text-center mb-8">
           <Button
             variant="outline"
-            className="rounded-full text-lg  bg-white text-black font-medium px-16 py-5  hover:bg-gray-100"
+            className="rounded-full text-left bg-white text-black font-medium px-16 py-5  hover:bg-gray-100"
             style={{ borderColor: "#000000" }}
           >
             ALL REWARDS

@@ -12,7 +12,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white border-b border-gray-100 fixed w-full top-0 z-50">
-      <div className="max-w-6xl mx-auto ">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Mobile menu button - moved to the left */}
           <div className="block sm:hidden">
@@ -97,7 +97,8 @@ export default function Navbar() {
           {/* User Profile - show on both mobile and desktop, but align differently */}
           <div className="flex items-center space-x-2 font-medium cursor-pointer">
             <span className="hidden sm:inline text-gray-700">John</span>
-            <UserCircle className="h-6 w-8 text-black pr-1" />
+            <User className="h-6 w-8 text-black pr-1 block sm:hidden" />
+            <UserCircle className="h-6 w-8 text-black pr-1 hidden sm:block" />
           </div>
         </div>
       </div>
@@ -135,10 +136,10 @@ export default function Navbar() {
           >
             Contact us
           </Link>
-          <div className="px-4 py-2 flex items-center space-x-2">
+          {/* <div className="px-4 py-2 flex items-center space-x-2">
             <UserCircle className="h-6 w-6 text-gray-600" />
             <span className="text-black">John</span>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>
