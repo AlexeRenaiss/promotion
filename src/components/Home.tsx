@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import RewardSection from "./RewardSection";
 import MoreWayToEarn from "./MoreWayToEarn";
 import HeroSection from "./HeroSection";
+import Footer from "./Footer";
 
 export default function RewardPage() {
   return (
@@ -15,6 +16,7 @@ export default function RewardPage() {
 
       {/* More Ways to Earn Section */}
       <MoreWayToEarn />
+      <Footer />
     </main>
   );
 }
