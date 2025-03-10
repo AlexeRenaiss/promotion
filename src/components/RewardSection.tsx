@@ -17,13 +17,13 @@ export default function RewardSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Reward Card 1 */}
         <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-          <div className="h-48 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
+          <div className=" bg-white relative m-2 rounded-lg overflow-hidden">
             <Image
               src="/images/reward1.png"
               alt="Health Care Favorites Bundle"
               width={384}
               height={192}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full object-contain rounded-lg"
             />
           </div>
           <div className="p-4 text-center font-bold text-black">
@@ -34,13 +34,13 @@ export default function RewardSection() {
 
         {/* Reward Card 2 */}
         <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-          <div className="h-48 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
+          <div className=" bg-white relative m-2 rounded-lg overflow-hidden">
             <Image
               src="/images/reward2.png"
               alt="Health Care Favorites Bundle"
               width={384}
               height={192}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full object-contain rounded-lg"
             />
           </div>
           <div className="p-4 text-center font-bold text-black">
@@ -51,13 +51,13 @@ export default function RewardSection() {
 
         {/* Reward Card 3 */}
         <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-          <div className="h-48 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
+          <div className="bg-white relative m-2 rounded-lg overflow-hidden">
             <Image
               src="/images/reward3.png"
               alt="Health Care Favorites Bundle"
               width={384}
               height={192}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full object-contain rounded-lg"
             />
           </div>
           <div className="p-4 text-center font-bold text-black">
@@ -69,13 +69,13 @@ export default function RewardSection() {
           <>
             {/* Reward Card 1 */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <div className="h-48 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
+              <div className="bg-white relative m-2 rounded-lg overflow-hidden">
                 <Image
                   src="/images/reward1.png"
                   alt="Health Care Favorites Bundle"
                   width={384}
                   height={192}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full object-contain rounded-lg"
                 />
               </div>
               <div className="p-4 text-center font-bold text-black">
@@ -86,13 +86,13 @@ export default function RewardSection() {
 
             {/* Reward Card 2 */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <div className="h-48 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
+              <div className="bg-white relative m-2 rounded-lg overflow-hidden">
                 <Image
                   src="/images/reward2.png"
                   alt="Health Care Favorites Bundle"
                   width={384}
                   height={192}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full object-contain rounded-lg"
                 />
               </div>
               <div className="p-4 text-center font-bold text-black">
@@ -103,13 +103,13 @@ export default function RewardSection() {
 
             {/* Reward Card 3 */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <div className="h-48 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
+              <div className="bg-white relative m-2 rounded-lg overflow-hidden">
                 <Image
                   src="/images/reward3.png"
                   alt="Health Care Favorites Bundle"
                   width={384}
                   height={192}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full object-contain rounded-lg"
                 />
               </div>
               <div className="p-4 text-center font-bold text-black">
@@ -119,13 +119,13 @@ export default function RewardSection() {
             </div>
             {/* Reward Card 1 */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <div className="h-48 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
+              <div className="bg-white relative m-2 rounded-lg overflow-hidden">
                 <Image
                   src="/images/reward1.png"
                   alt="Health Care Favorites Bundle"
                   width={384}
                   height={192}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full object-contain rounded-lg"
                 />
               </div>
               <div className="p-4 text-center font-bold text-black">
@@ -136,13 +136,13 @@ export default function RewardSection() {
 
             {/* Reward Card 2 */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <div className="h-48 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
+              <div className="bg-white relative m-2 rounded-lg overflow-hidden">
                 <Image
                   src="/images/reward2.png"
                   alt="Health Care Favorites Bundle"
                   width={384}
                   height={192}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full object-contain rounded-lg"
                 />
               </div>
               <div className="p-4 text-center font-bold text-black">
@@ -153,13 +153,13 @@ export default function RewardSection() {
 
             {/* Reward Card 3 */}
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-              <div className="h-48 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
+              <div className="bg-white relative m-2 rounded-lg overflow-hidden">
                 <Image
                   src="/images/reward3.png"
                   alt="Health Care Favorites Bundle"
                   width={384}
                   height={192}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full object-contain rounded-lg"
                 />
               </div>
               <div className="p-4 text-center font-bold text-black">
