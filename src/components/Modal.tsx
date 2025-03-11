@@ -11,7 +11,7 @@ const AuthModal: React.FC<ModalProps> = ({ isOpen, onClose, login }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
       <div className="bg-white p-12 rounded-2xl shadow-lg max-w-sm w-full text-center relative">
         <button
           onClick={onClose}
