@@ -2,15 +2,14 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between bg-[#FBE9D8]">
+    <section className="flex flex-col md:flex-row items-center justify-between bg-[#f7e5cc]">
       {/* Left: Image */}
-      <div className="md:w-1/2">
+      <div className="md:w-1/2 relative h-[400px] md:h-[540px]">
         <Image
-          src="/images/banner.png" // Replace with actual image path
+          src="/images/banner.png"
           alt="Beauty Code Loyalty Program"
-          width={940}
-          height={640}
-          className="object-contain"
+          fill
+          className="object-cover"
         />
       </div>
 
@@ -27,7 +26,7 @@ const Hero = () => {
 
         <button
           type="submit"
-          className="mt-6 w-full max-w-sm py-2 bg-primary text-white font-bold rounded-full hover:bg-primary transition-colors"
+          className="mt-6 w-full max-w-sm py-3 bg-primary text-white font-bold rounded-full hover:bg-primary transition-colors"
         >
           JOIN NOW
         </button>
