@@ -1,11 +1,11 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { ChevronRight, User } from "lucide-react";
 import Link from "next/link";
 
 interface MenuItemProps {
   label: string;
   href: string;
-  icon?: JSX.Element;
+  icon?: React.ReactNode;
 }
 
 const MenuItem: FC<MenuItemProps> = ({ label, href, icon }) => {
