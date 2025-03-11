@@ -1,11 +1,17 @@
+"use client";
+import { useRouter } from "next/navigation";
 export default function EarningSection() {
+  const router = useRouter();
   return (
     <div className="flex flex-col items-center text-center py-10 my-8 md:my-16 px-4 sm:px-6">
       <h2 className="text-2xl font-bold text-black mb-6">Start Earning</h2>
       <div className="flex flex-col md:flex-row gap-6 w-full max-w-5xl">
         {/* Complete Your Profile */}
         <div>
-          <div className="flex-1 border border-blue-500 rounded-md p-3 bg-blue-50 hover:bg-blue-100 transition shadow-md">
+          <div
+            className="flex-1 border border-blue-500 rounded-md p-3 bg-blue-50 hover:bg-blue-100 transition shadow-md cursor-pointer"
+            onClick={() => router.push("/reward")}
+          >
             <h3 className="text-lg font-bold text-blue-600 flex items-center justify-center">
               Complete Your Profile <span className="ml-8">&gt;</span>
             </h3>
@@ -17,7 +23,10 @@ export default function EarningSection() {
 
         {/* Take a Quiz */}
         <div>
-          <div className="flex-1 border border-primary rounded-md p-3 bg-pink-50 hover:bg-pink-100 transition shadow-md">
+          <div
+            className="flex-1 border border-primary rounded-md p-3 bg-pink-50 hover:bg-pink-100 transition shadow-md"
+            onClick={() => router.push("/quiz")}
+          >
             <h3 className="text-lg font-bold text-primary flex items-center justify-center">
               Take a Quiz <span className="ml-8">&gt;</span>
             </h3>

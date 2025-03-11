@@ -1,7 +1,12 @@
+"use client";
+import { Button } from "./ui/button";
+import { usePathname } from "next/navigation";
+const paths = ["/account-info", "/points", "/account"];
 export default function HeroSection() {
+  const pathname = usePathname();
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[300px] bg-primary text-white mt-14">
-      <h2 className="text-3xl md:text-3xl font-bold mt-14 mb-4">Rewards</h2>
+      <h2 className="text-3xl md:text-3xl font-bold mt-14 mb-4">Hello John</h2>
 
       {/* Light Background to Keep the Bottom Cut Effect */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gray-100"></div>
@@ -31,6 +36,19 @@ export default function HeroSection() {
             Available Balance
           </p>
         </div>
+        {paths.includes(pathname) && (
+          <>
+            <Button
+              className="bg-primary  mt-4 hover:bg-primary text-white font-semibold px-20 py-4 w-72 rounded-full transition-all duration-300 hover:scale-105"
+              // onClick={() => router.push("/points")}
+            >
+              SELECT BRANDS
+            </Button>
+            <p className="text-md text-black mt-2 underline font-bold">
+              Points History
+            </p>
+          </>
+        )}
       </div>
     </section>
   );

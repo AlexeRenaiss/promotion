@@ -1,8 +1,36 @@
+"use client";
 import Image from "next/image";
+import Modal from "./Modal";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Hero = () => {
+  const [isLoginModalOpen, setIsLoginModalOpen] = React.useState(false);
+  const [user, setUser] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      setUser(true);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    setIsLoginModalOpen(false);
+
+    router.push("/login");
+  };
+  const handleJoinNow = () => {
+    if (user) {
+      router.push("/reward");
+    } else {
+      setIsLoginModalOpen(true);
+    }
+  };
+
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between bg-[#f7e5cc]">
+    <section className="flex flex-col md:flex-row items-center justify-between bg-[#f7e5cc] mt-16">
       {/* Left: Image */}
       <div className="md:w-1/2 relative h-[400px] md:h-[540px]">
         <Image
@@ -27,10 +55,17 @@ const Hero = () => {
         <button
           type="submit"
           className="mt-6 w-full max-w-sm py-3 bg-primary text-white font-bold rounded-full hover:bg-primary transition-colors"
+          onClick={handleJoinNow}
         >
-          JOIN NOW
+          {user ? "START EARNING" : "JOIN NOW"}
         </button>
       </div>
+
+      <Modal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+        login={handleLogin}
+      />
     </section>
   );
 };

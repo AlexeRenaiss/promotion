@@ -1,46 +1,42 @@
+"use client";
 import React from "react";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onLeave: () => void;
-  title?: string;
-  children: React.ReactNode;
+  login: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({
-  isOpen,
-  onClose,
-  onLeave,
-  title,
-  children,
-}) => {
+const AuthModal: React.FC<ModalProps> = ({ isOpen, onClose, login }) => {
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white p-12 rounded-2xl shadow-lg  max-w-lg w-full text-center py-20">
-        {title && (
-          <h2 className="text-2xl font-bold text-black mb-4">{title}</h2>
-        )}
-        <div className="mt-4 text-black text-lg">{children}</div>
-        <div className="mt-8 flex justify-center gap-4">
-          <button
-            onClick={onLeave}
-            className="px-8 py-2 text-white bg-primary rounded-full font-semibold hover:bg-primary w-40"
-          >
-            LEAVE
-          </button>
-          <button
-            onClick={onClose}
-            className="px-8 py-2 text-primary border border-primary rounded-full font-semibold hover:bg-pink-50 w-40"
-          >
-            CANCEL
-          </button>
-        </div>
+      <div className="bg-white p-12 rounded-2xl shadow-lg max-w-sm w-full text-center relative">
+        <button
+          onClick={onClose}
+          className="absolute top-3 right-3 text-gray-600 hover:text-black"
+        >
+          &#10005;
+        </button>
+        <h2 className="text-lg font-bold text-black mt-4">
+          Please log in to get started.
+        </h2>
+        <button
+          className="w-full  mt-6 bg-primary text-white font-bold py-2 rounded-full shadow-md hover:bg-primary"
+          onClick={login}
+        >
+          LOGIN
+        </button>
+        <p className="mt-10 text-black font-semibold ">
+          Don't have an account?
+        </p>
+        <button className="w-full mt-4 border border-primary text-primary font-bold py-2 rounded-full shadow-md hover:bg-pink-100">
+          SIGNUP
+        </button>
       </div>
     </div>
   );
 };
 
-export default Modal;
+export default AuthModal;

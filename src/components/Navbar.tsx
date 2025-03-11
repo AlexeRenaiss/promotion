@@ -28,6 +28,10 @@ export default function Navbar() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    window.location.href = "/";
+  };
 
   return (
     <nav className="bg-white border-b border-gray-100 fixed w-full top-0 z-50">
@@ -144,12 +148,12 @@ export default function Navbar() {
                 >
                   My Account
                 </Link>
-                <Link
-                  href="/logout"
-                  className="block px-4 py-1 text-black hover:bg-gray-50 text-lg font-medium"
+                <div
+                  className="block px-4 py-1 text-black hover:bg-gray-50 text-lg font-medium cursor-pointer"
+                  onClick={handleLogout}
                 >
                   Sign Out
-                </Link>
+                </div>
               </div>
             )}
           </div>

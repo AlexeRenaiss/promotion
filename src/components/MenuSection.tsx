@@ -32,7 +32,7 @@ const UserMenu: FC = () => {
         <div className="flex flex-col">
           <MenuItem
             label="Complete profile"
-            href="/profile"
+            href="/account-info"
             icon={<User size={18} />}
           />
           <MenuItem label="Help" href="/help" icon={<User size={18} />} />

@@ -1,12 +1,26 @@
+"use client";
+import Image from "next/image";
 import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 
 const FavoriteBrands = () => {
+  const router = useRouter();
   return (
-    <main className="my-20  flex items-center justify-center p-4">
+    <main className="my-20 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full text-center space-y-6">
         <div className="relative">
           <h1 className="text-3xl font-bold text-black">MY FAVORITE BRANDS</h1>
-          {/* Decorative stars */}
+        </div>
+
+        {/* Star Image */}
+        <div className="flex justify-center">
+          <Image
+            src="/images/star.svg" // Ensure the correct path is used
+            alt="Star Icon"
+            width={100}
+            height={100}
+            className="mx-auto"
+          />
         </div>
 
         <div className="space-y-4 py-8">
@@ -20,7 +34,10 @@ const FavoriteBrands = () => {
           </p>
         </div>
 
-        <Button className="bg-primary hover:bg-primary text-white font-semibold px-20 py-4 w-72 rounded-full transition-all duration-300 hover:scale-105">
+        <Button
+          className="bg-primary  hover:bg-primary text-white font-semibold px-20 py-4 w-72 rounded-full transition-all duration-300 hover:scale-105"
+          onClick={() => router.push("/points")}
+        >
           SELECT BRANDS
         </Button>
       </div>
