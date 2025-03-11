@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function MoreWayToEarn() {
+export default function MoreWayToEarn({ title }) {
   // Sample data for quiz cards
   const quizCards = [
     {
@@ -79,7 +79,7 @@ export default function MoreWayToEarn() {
     <div className="mx-auto px-4 py-16 bg-white w-full">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-8 text-black ">
-          <h2 className="text-2xl  mb-2 font-bold">More ways to earn</h2>
+          <h2 className="text-2xl  mb-2 font-bold"> {title}</h2>
           <p className="font-extralight">
             Earn points with each one of these quick quizzes.
           </p>

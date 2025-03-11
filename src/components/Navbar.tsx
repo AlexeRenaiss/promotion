@@ -2,13 +2,32 @@
 
 import Link from "next/link";
 import { UserCircle, User } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const pathname = usePathname();
+  const profileDropdownRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        profileDropdownRef.current &&
+        !profileDropdownRef.current.contains(event.target)
+      ) {
+        setIsProfileOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="bg-white border-b border-gray-100 fixed w-full top-0 z-50">
@@ -95,10 +114,44 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* User Profile - show on both mobile and desktop, but align differently */}
-          <div className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-2 space-y-1 sm:space-y-0 font-medium cursor-pointer">
-            <UserCircle className="h-6 w-8 text-black pr-1 sm:pr-0" />
-            <span className="text-black text-[10px] sm:text-sm">John</span>
+          {/* User Profile with dropdown */}
+          <div className="relative" ref={profileDropdownRef}>
+            <div
+              className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-2 space-y-1 sm:space-y-0 font-medium cursor-pointer"
+              onClick={() => setIsProfileOpen(!isProfileOpen)}
+            >
+              <UserCircle className="h-6 w-8 text-black pr-1 sm:pr-0" />
+              <span className="text-black text-[10px] sm:text-sm">John</span>
+            </div>
+
+            {/* Profile Dropdown */}
+            {isProfileOpen && (
+              <div
+                className="absolute  min-w-56 -top-7 right-0 mt-2 bg-white rounded-lg shadow-lg py-2 z-50 border border-gray-100 transition-all duration-300 ease-in-out 
+               animate-fadeIn "
+              >
+                <div className="px-4 py-3 border-b border-gray-100">
+                  <div className="flex items-center justify-end ">
+                    <div className="text-center text-black font-semibold text-lg mt-1">
+                      John
+                    </div>
+                    <UserCircle className="h-6 w-8 text-black pr-1 sm:pr-0" />
+                  </div>
+                </div>
+                <Link
+                  href="/account"
+                  className="block px-4 py-3 text-black hover:bg-gray-50 text-lg font-medium"
+                >
+                  My Account
+                </Link>
+                <Link
+                  href="/logout"
+                  className="block px-4 py-1 text-black hover:bg-gray-50 text-lg font-medium"
+                >
+                  Sign Out
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -136,10 +189,6 @@ export default function Navbar() {
           >
             Contact us
           </Link>
-          {/* <div className="px-4 py-2 flex items-center space-x-2">
-            <UserCircle className="h-6 w-6 text-gray-600" />
-            <span className="text-black">John</span>
-          </div> */}
         </div>
       </div>
     </nav>

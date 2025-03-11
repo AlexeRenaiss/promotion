@@ -172,7 +172,7 @@ export default function RewardSection() {
       </div>
 
       <div className="text-center mt-8">
-        <CustomButton onClick={() => setShowAll(!showAll)} />
+        <CustomButton onClick={() => setShowAll(!showAll)} title="VIEW ALL" />
       </div>
     </div>
   );

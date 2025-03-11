@@ -15,7 +15,7 @@ export default function RewardPage() {
       <RewardSection />
 
       {/* More Ways to Earn Section */}
-      <MoreWayToEarn />
+      <MoreWayToEarn title={MoreWayToEarn} />
       <Footer />
     </main>
   );
