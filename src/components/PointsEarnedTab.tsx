@@ -114,7 +114,7 @@ const RewardsTab: React.FC<RewardsTabProps> = ({ entries }) => {
             <div key={entry.id} className="border-t border-gray-200 py-4">
               <div className="grid grid-cols-2">
                 <div className="text-left">
-                  <div className="text-black  text-sm md:text-lg">
+                  <div className="text-black font-bold text-sm md:text-lg">
                     {entry.date}
                   </div>
                   <div className="text-black text-sm md:text-lg">
@@ -122,7 +122,7 @@ const RewardsTab: React.FC<RewardsTabProps> = ({ entries }) => {
                   </div>
                   <Link
                     href={`/details/${entry.id}`}
-                    className="text-primary hover:text-primary   text-sm md:text-lg underline"
+                    className="text-primary hover:text-primary font-bold  text-sm md:text-lg"
                   >
                     Resend Email
                   </Link>
