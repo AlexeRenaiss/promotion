@@ -37,7 +37,6 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <div className="relative w-48 h-12">
-            {" "}
             {/* Adjust width & height as needed */}
             <Image
               src="/images/logo.svg" // Replace with your actual logo path
@@ -95,7 +94,7 @@ export default function LoginPage() {
               <input
                 type="checkbox"
                 id="recaptcha"
-                className="mr-3 w-3 h-3 accent-blue-500 scale-150"
+                className="mr-3 w-5 h-5 accent-blue-500 scale-150"
               />
               <label htmlFor="recaptcha" className="text-gray-700 text-sm">
                 I'm not a robot

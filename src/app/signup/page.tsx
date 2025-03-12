@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function SignUpPage() {
   const [name, setName] = useState("");
@@ -27,26 +28,41 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="bg-[#f5f5f5]">
+    <div className="bg-[#f4f7fc] p-4">
       {/* Back Button */}
 
       <div className="p-4">
         <button
           onClick={() => router.back()}
-          className=" top-4 left-4   px-10 flex items-center gap-2  py-2 bg-red-600 text-white font-bold rounded-md hover:bg-rprimary transition  md:py-2"
+          className="top-4 pl-4 pr-8 flex items-center gap-2 py-2 bg-primary text-white font-bold rounded-md hover:bg-rprimary transition md:py-2"
         >
-          <span className="text-lg">{`<`}</span> Back
+          <Image
+            src="/images/white.svg"
+            alt="Back"
+            width={8}
+            height={8}
+            className="mr-6"
+          />
+          Back
         </button>
-        <div className="relative flex items-center justify-center  bg-[#f5f5f5] px-4">
-          <div className="w-full max-w-4xl p-8 rounded-lg bg-white my-8">
+        <div className="relative flex items-center justify-center  bg-[#f5f5f5]">
+          <div className="w-full max-w-4xl p-4 px-6 rounded-2xl bg-white my-8">
             {/* Logo */}
-            <div className="text-center mb-6 text-3xl font-bold">
-              <span className="text-black">Beauty</span>
-              <span className="text-primary">Code</span>
+            <div className="flex justify-center mb-8 mt-4">
+              <div className="relative w-48 h-12">
+                {/* Adjust width & height as needed */}
+                <Image
+                  src="/images/logo.svg" // Replace with your actual logo path
+                  alt="Beauty Code Logo"
+                  layout="fill"
+                  objectFit="contain"
+                  priority
+                />
+              </div>
             </div>
 
             {/* Heading */}
-            <h1 className="text-2xl font-semibold text-center mb-6 text-black">
+            <h1 className="text-xl md:text-2xl font-semibold text-center mb-6 text-[#171D52]">
               Sign up. Earn rewards. Do good.
             </h1>
 
@@ -94,7 +110,7 @@ export default function SignUpPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* reCAPTCHA */}
                 <div className="flex items-center border p-4 bg-gray-50 text-black rounded-lg">
-                  <input type="checkbox" className="mr-2" />
+                  <input type="checkbox" className="mr-2 w-5 h-5" />
                   <span>I’m not a robot</span>
                 </div>
               </div>
@@ -129,7 +145,7 @@ export default function SignUpPage() {
               <div className="flex items-center">
                 <input
                   type="checkbox"
-                  className="mr-3"
+                  className="mr-3 w-5 h-5"
                   checked={agreedToTerms}
                   onChange={(e) => setAgreedToTerms(e.target.checked)}
                   required
