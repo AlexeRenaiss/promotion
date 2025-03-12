@@ -27,15 +27,15 @@ interface RewardsTabProps {
 const PointsEarnedTab: React.FC<PointsTabProps> = ({ entries }) => {
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold text-black mb-6 text-center">
+      <h2 className="text-xl md:text-2xl font-bold text-black mb-6 text-center">
         MY POINTS EARNED
       </h2>
 
       <div className="w-full pr-10">
         {/* Table headers */}
         <div className="grid grid-cols-3 mb-4">
-          <div className="font-bold text-gray-800">ACTION</div>
-          <div className="font-bold text-gray-800">STATUS</div>
+          <div className="font-bold text-gray-800 text-left">ACTION</div>
+          <div className="font-bold text-gray-800 text-center">STATUS</div>
           <div className="font-bold text-gray-800 text-right">POINTS</div>
         </div>
 
@@ -43,37 +43,49 @@ const PointsEarnedTab: React.FC<PointsTabProps> = ({ entries }) => {
         {entries.map((entry) => (
           <div key={entry.id} className="border-t border-gray-200 py-4">
             <div className="grid grid-cols-3">
-              <div>
-                <div className="text-black font-bold">{entry.date}</div>
-                <div className="text-black">{entry.action}</div>
+              <div className="text-left">
+                <div className="text-black font-bold text-sm md:text-lg">
+                  {entry.date}
+                </div>
+                <div className="text-black text-sm md:text-lg">
+                  {entry.action}
+                </div>
                 <Link
                   href={`/details/${entry.id}`}
-                  className="text-primary hover:text-primary font-bold"
+                  className="text-primary hover:text-primary font-bold  text-sm md:text-lg"
                 >
                   View Details
                 </Link>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center justify-center">
                 {entry.status === "Approved" && (
                   <div className="flex items-center">
                     <div className="h-2 w-2 rounded-full bg-green-500 mr-2"></div>
-                    <span className="text-black">Approved</span>
+                    <span className="text-black text-sm md:text-lg">
+                      Approved
+                    </span>
                   </div>
                 )}
                 {entry.status === "Pending" && (
                   <div className="flex items-center">
                     <div className="h-2 w-2 rounded-full bg-yellow-500 mr-2"></div>
-                    <span>Pending</span>
+                    <span className="text-black text-sm md:text-lg">
+                      Pending
+                    </span>
                   </div>
                 )}
                 {entry.status === "Declined" && (
                   <div className="flex items-center">
                     <div className="h-2 w-2 rounded-full bg-red-500 mr-2"></div>
-                    <span>Declined</span>
+                    <span className="text-black text-sm md:text-lg">
+                      Declined
+                    </span>
                   </div>
                 )}
               </div>
-              <div className="text-right text-black">{entry.points}</div>
+              <div className="text-right text-black text-lg">
+                {entry.points}
+              </div>
             </div>
           </div>
         ))}
@@ -101,8 +113,21 @@ const RewardsTab: React.FC<RewardsTabProps> = ({ entries }) => {
           entries.map((entry) => (
             <div key={entry.id} className="border-t border-gray-200 py-4">
               <div className="grid grid-cols-2">
-                <div className="text-gray-700">{entry.item}</div>
-                <div className="text-right">{entry.points}</div>
+                <div className="text-left">
+                  <div className="text-black font-bold text-sm md:text-lg">
+                    {entry.date}
+                  </div>
+                  <div className="text-black text-sm md:text-lg">
+                    {entry.item}
+                  </div>
+                  <Link
+                    href={`/details/${entry.id}`}
+                    className="text-primary hover:text-primary font-bold  text-sm md:text-lg"
+                  >
+                    View Details
+                  </Link>
+                </div>
+                <div className="text-right pr-8 ">{entry.points}</div>
               </div>
             </div>
           ))

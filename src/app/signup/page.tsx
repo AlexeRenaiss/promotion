@@ -28,7 +28,7 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="bg-[#f4f7fc] p-4">
+    <div className="bg-[#f4f7fc] py-4">
       {/* Back Button */}
 
       <div className="p-4">
@@ -70,7 +70,9 @@ export default function SignUpPage() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block font-bold text-black">Name *</label>
+                  <label className="block font-bold text-black">
+                    Name <span className="text-primary">*</span>
+                  </label>
                   <input
                     type="text"
                     placeholder="Required"
@@ -82,7 +84,7 @@ export default function SignUpPage() {
                 </div>
                 <div>
                   <label className="block font-bold text-black">
-                    Email Address *
+                    Email Address <span className="text-primary">*</span>
                   </label>
                   <input
                     type="email"
@@ -95,7 +97,7 @@ export default function SignUpPage() {
                 </div>
                 <div>
                   <label className="block font-bold text-black">
-                    Password *
+                    Password <span className="text-primary">*</span>
                   </label>
                   <input
                     type="password"
@@ -107,11 +109,23 @@ export default function SignUpPage() {
                   />
                 </div>
               </div>
+
+              {/* reCAPTCHA */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* reCAPTCHA */}
-                <div className="flex items-center border p-4 bg-gray-50 text-black rounded-lg">
-                  <input type="checkbox" className="mr-2 w-5 h-5" />
-                  <span>I’m not a robot</span>
+                <div className="border border-gray-200 bg-gray-50 rounded-lg px-3 py-1 flex items-center">
+                  <input
+                    type="checkbox"
+                    id="recaptcha"
+                    className="mr-3 w-4 h-4 bg-gray-50 scale-150"
+                  />
+                  <label htmlFor="recaptcha" className="text-gray-700 text-sm">
+                    I'm not a robot
+                  </label>
+                  <div className="ml-auto mr-5">
+                    <div className="w-12 h-12 bg-gray-100 flex items-center justify-center">
+                      <span className="text-xs text-gray-500">reCAPTCHA</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 

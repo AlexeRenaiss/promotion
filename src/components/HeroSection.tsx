@@ -4,8 +4,14 @@ import { usePathname } from "next/navigation";
 const paths = ["/account-info", "/points", "/account"];
 export default function HeroSection({
   title = "Hello John",
+  btnTitle = "SELECT BRANDS",
+  showBalance = true,
+  balanceStatus = false,
 }: {
   title?: string;
+  btnTitle?: string;
+  showBalance?: boolean;
+  balanceStatus?: boolean;
 }) {
   const pathname = usePathname();
   return (
@@ -36,9 +42,21 @@ export default function HeroSection({
         {/* Content with consistent sizing across devices */}
         <div className="relative z-10 text-center text-black pt-4">
           <p className="text-3xl md:text-5xl font-bold ">25</p>
-          <p className="text-xl md:text-2xl font-medium pt-3">
-            Available Balance
-          </p>
+
+          {balanceStatus && (
+            <p className="mt-2">You have 25 points ready to be redeemed.</p>
+          )}
+          {!balanceStatus && (
+            <>
+              <p
+                className={`text-xl md:text-2xl font-medium pt-3 ${
+                  showBalance ? "text-black" : "text-primary"
+                }`}
+              >
+                {showBalance ? "Available Balance" : "My Points"}
+              </p>
+            </>
+          )}
         </div>
         {paths.includes(pathname) && (
           <>
@@ -47,7 +65,7 @@ export default function HeroSection({
                 className="bg-primary  mt-4 hover:bg-primary text-white font-semibold px-20 py-4 w-72 rounded-full transition-all duration-300 hover:scale-105"
                 // onClick={() => router.push("/points")}
               >
-                SELECT BRANDS
+                {btnTitle}
               </Button>
             </div>
             <p className="text-md text-black mt-2 underline font-bold">

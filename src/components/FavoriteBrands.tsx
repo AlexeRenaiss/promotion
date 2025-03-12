@@ -9,7 +9,9 @@ const FavoriteBrands = () => {
     <main className="my-20 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full text-center space-y-6">
         <div className="relative">
-          <h1 className="text-3xl font-bold text-black">MY FAVORITE BRANDS</h1>
+          <h1 className="text-2xl md:text-3xl font-bold text-black">
+            MY FAVORITE BRANDS
+          </h1>
         </div>
 
         {/* Star Image */}
@@ -24,7 +26,7 @@ const FavoriteBrands = () => {
         </div>
 
         <div className="space-y-4 py-8">
-          <h2 className="text-xl font-semibold text-black">
+          <h2 className="text-lg md:text-xl font-semibold text-black">
             You currently do not have any favorite brands selected
           </h2>
           <p className="text-black max-w-lg mx-auto leading-relaxed">

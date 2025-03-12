@@ -9,7 +9,7 @@ export default function RewardPage() {
     <main className="min-h-screen bg-[#f4f7fc]">
       {/* Header */}
       <Navbar />
-      <HeroSection />
+      <HeroSection btnTitle="EARN POINTS" showBalance={false} />
       <FavoriteBrands />
       <MenuSection />
       <Footer />

@@ -23,7 +23,12 @@ interface RewardEntry {
 const sampleRewardEntries: RewardEntry[] = [
   // This is empty by default to match the screenshot
   // Add sample data like this when needed:
-  // { id: '1', item: '$5 Gift Card', points: 500 }
+  {
+    id: "1",
+    date: "02/27/25",
+    item: "Gidt Card Load Test",
+    points: 5,
+  },
 ];
 
 const samplePointEntries: PointEntry[] = [
@@ -55,7 +60,7 @@ export default function RewardPage() {
     <main className="min-h-screen bg-[#f4f7fc]">
       {/* Header */}
       <Navbar />
-      <HeroSection />
+      <HeroSection balanceStatus={true} />
       <PointsRewardsDashboard
         pointEntries={samplePointEntries}
         rewardEntries={sampleRewardEntries}

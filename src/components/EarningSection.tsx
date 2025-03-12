@@ -9,7 +9,7 @@ export default function EarningSection() {
         {/* Complete Your Profile */}
         <div>
           <div
-            className="flex items-center justify-between border border-[#3C6DCC] rounded-2xl py-10 md:p-3 bg-[#ebf0fa] hover:bg-[blue-100] transition shadow-md cursor-pointer"
+            className="flex items-center justify-between border border-[#3C6DCC] rounded-md py-10 md:p-3 bg-[#ebf0fa] hover:bg-[blue-100] transition shadow-md cursor-pointer"
             onClick={() => router.push("/reward")}
           >
             <h3 className="text-lg font-bold text-[#3C6DCC] flex-1 text-center">

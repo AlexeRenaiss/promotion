@@ -57,7 +57,7 @@ export default function LoginPage() {
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
             <label htmlFor="name" className="block mb-2 font-bold text-black">
-              Name <span className="text-pink-500">*</span>
+              Name <span className="text-primary">*</span>
             </label>
             <input
               id="name"
@@ -75,7 +75,7 @@ export default function LoginPage() {
               htmlFor="password"
               className="block mb-2 font-bold text-black"
             >
-              Password <span className="text-pink-500">*</span>
+              Password <span className="text-primary">*</span>
             </label>
             <input
               id="password"
@@ -90,11 +90,11 @@ export default function LoginPage() {
 
           {/* reCAPTCHA */}
           <div className="mb-6">
-            <div className="border border-gray-200 rounded-lg p-3 flex items-center">
+            <div className="border border-gray-200 bg-gray-50 rounded-lg p-3 flex items-center">
               <input
                 type="checkbox"
                 id="recaptcha"
-                className="mr-3 w-5 h-5 accent-blue-500 scale-150"
+                className="mr-3 w-4 h-4 bg-gray-50 scale-150"
               />
               <label htmlFor="recaptcha" className="text-gray-700 text-sm">
                 I'm not a robot
@@ -131,7 +131,7 @@ export default function LoginPage() {
             <span className="text-black text-sm">Don't have an account? </span>
             <Link
               href="/signup"
-              className="text-black text-sm underline font-semibold hover:underline"
+              className="text-[#171d53] text-sm underline font-semibold hover:underline"
             >
               Sign up
             </Link>
