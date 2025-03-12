@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f4f7fc]">
       <Navbar />
-      <HeroSection />
+      <HeroSection title="Earn Points" />
       <EarningSection />
       <Footer />
     </main>

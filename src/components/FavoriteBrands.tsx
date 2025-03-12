@@ -35,7 +35,7 @@ const FavoriteBrands = () => {
         </div>
 
         <Button
-          className="bg-primary  hover:bg-primary text-white font-semibold px-20 py-4 w-72 rounded-full transition-all duration-300 hover:scale-105"
+          className="bg-primary text-sm  hover:bg-primary text-white font-semibold px-20 py-4 w-72 rounded-full transition-all duration-300 hover:scale-105"
           onClick={() => router.push("/points")}
         >
           SELECT BRANDS

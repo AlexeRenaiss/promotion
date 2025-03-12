@@ -2,11 +2,15 @@
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
 const paths = ["/account-info", "/points", "/account"];
-export default function HeroSection() {
+export default function HeroSection({
+  title = "Hello John",
+}: {
+  title?: string;
+}) {
   const pathname = usePathname();
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[300px] bg-primary text-white mt-14">
-      <h2 className="text-3xl md:text-3xl font-bold mt-14 mb-4">Hello John</h2>
+      <h2 className="text-3xl md:text-3xl font-bold mt-14 mb-4">{title}</h2>
 
       {/* Light Background to Keep the Bottom Cut Effect */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gray-100"></div>
@@ -32,18 +36,20 @@ export default function HeroSection() {
         {/* Content with consistent sizing across devices */}
         <div className="relative z-10 text-center text-black pt-4">
           <p className="text-3xl md:text-5xl font-bold ">25</p>
-          <p className="text-lg md:text-2xl font-medium pt-3">
+          <p className="text-xl md:text-2xl font-medium pt-3">
             Available Balance
           </p>
         </div>
         {paths.includes(pathname) && (
           <>
-            <Button
-              className="bg-primary  mt-4 hover:bg-primary text-white font-semibold px-20 py-4 w-72 rounded-full transition-all duration-300 hover:scale-105"
-              // onClick={() => router.push("/points")}
-            >
-              SELECT BRANDS
-            </Button>
+            <div className="relative z-10">
+              <Button
+                className="bg-primary  mt-4 hover:bg-primary text-white font-semibold px-20 py-4 w-72 rounded-full transition-all duration-300 hover:scale-105"
+                // onClick={() => router.push("/points")}
+              >
+                SELECT BRANDS
+              </Button>
+            </div>
             <p className="text-md text-black mt-2 underline font-bold">
               Points History
             </p>
