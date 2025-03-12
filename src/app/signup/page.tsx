@@ -45,7 +45,7 @@ export default function SignUpPage() {
           />
           Back
         </button>
-        <div className="relative flex items-center justify-center  bg-[#f5f5f5]">
+        <div className="relative flex items-center justify-center  bg-[#f4f7fc]">
           <div className="w-full max-w-4xl p-4 px-6 rounded-2xl bg-white my-8">
             {/* Logo */}
             <div className="flex justify-center mb-8 mt-4">
