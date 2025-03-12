@@ -25,7 +25,13 @@ const sampleRewardEntries: RewardEntry[] = [
   // Add sample data like this when needed:
   {
     id: "1",
-    date: "02/27/25",
+    date: "01/13/25",
+    item: "Gidt Card Load Test",
+    points: 5,
+  },
+  {
+    id: "2",
+    date: "01/10/25",
     item: "Gidt Card Load Test",
     points: 5,
   },

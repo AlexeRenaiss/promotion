@@ -112,18 +112,22 @@ export default function SignUpPage() {
 
               {/* reCAPTCHA */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="border border-gray-200 bg-gray-50 rounded-lg px-3 py-1 flex items-center">
+                <div className="border  bg-gray-50 rounded-lg px-3 py-1 flex items-center">
                   <input
                     type="checkbox"
                     id="recaptcha"
                     className="mr-3 w-4 h-4 bg-gray-50 scale-150"
                   />
-                  <label htmlFor="recaptcha" className="text-gray-700 text-sm">
+                  <label htmlFor="recaptcha" className="text-black text-sm">
                     I'm not a robot
                   </label>
-                  <div className="ml-auto mr-5">
+                  <div className="ml-auto">
                     <div className="w-12 h-12 bg-gray-100 flex items-center justify-center">
-                      <span className="text-xs text-gray-500">reCAPTCHA</span>
+                      <img
+                        src="/images/captcha.svg"
+                        alt="reCAPTCHA"
+                        className="w-8 h-8"
+                      />
                     </div>
                   </div>
                 </div>

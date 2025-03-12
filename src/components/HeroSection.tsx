@@ -41,6 +41,11 @@ export default function HeroSection({
 
         {/* Content with consistent sizing across devices */}
         <div className="relative z-10 text-center text-black pt-4">
+          {balanceStatus && (
+            <p className="text-2xl md:text-3xl font-bold mb-4">
+              Points History
+            </p>
+          )}
           <p className="text-3xl md:text-5xl font-bold ">25</p>
 
           {balanceStatus && (

@@ -27,7 +27,7 @@ interface RewardsTabProps {
 const PointsEarnedTab: React.FC<PointsTabProps> = ({ entries }) => {
   return (
     <div className="w-full">
-      <h2 className="text-xl md:text-2xl font-bold text-black mb-6 text-center">
+      <h2 className="text-xl md:text-2xl font-bold text-[#171d53] mb-6 text-center">
         MY POINTS EARNED
       </h2>
 
@@ -97,7 +97,7 @@ const PointsEarnedTab: React.FC<PointsTabProps> = ({ entries }) => {
 const RewardsTab: React.FC<RewardsTabProps> = ({ entries }) => {
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold text-black mb-6 text-center">
+      <h2 className="text-xl md:text-2xl font-bold text-[#171d53] mb-6 text-center">
         MY REWARDS HISTORY
       </h2>
 
@@ -114,7 +114,7 @@ const RewardsTab: React.FC<RewardsTabProps> = ({ entries }) => {
             <div key={entry.id} className="border-t border-gray-200 py-4">
               <div className="grid grid-cols-2">
                 <div className="text-left">
-                  <div className="text-black font-bold text-sm md:text-lg">
+                  <div className="text-black  text-sm md:text-lg">
                     {entry.date}
                   </div>
                   <div className="text-black text-sm md:text-lg">
@@ -122,9 +122,9 @@ const RewardsTab: React.FC<RewardsTabProps> = ({ entries }) => {
                   </div>
                   <Link
                     href={`/details/${entry.id}`}
-                    className="text-primary hover:text-primary font-bold  text-sm md:text-lg"
+                    className="text-primary hover:text-primary   text-sm md:text-lg underline"
                   >
-                    View Details
+                    Resend Email
                   </Link>
                 </div>
                 <div className="text-right pr-8 ">{entry.points}</div>
