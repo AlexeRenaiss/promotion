@@ -8,12 +8,12 @@ const ContactSection = () => {
           Get in touch with us!
         </h2>
 
-        <p className="text-center mb-6">
+        <p className=" mb-6">
           Questions, comments, concerns? We welcome any feedback to help us
           provide all Your Beauty Code with the best possible experience!
         </p>
 
-        <p className="text-center">Email us at teamhair@yourbeautycode.com</p>
+        <p className="">Email us at teamhair@yourbeautycode.com</p>
       </div>
     </div>
   );
