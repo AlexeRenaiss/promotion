@@ -30,7 +30,7 @@ export default function EarningSection() {
         {/* Take a Quiz */}
         <div>
           <div
-            className="flex items-center justify-between border border-primary rounded-2xl py-10 md:p-3 bg-[#fbe9f1] hover:bg-[#fbe9f1] transition shadow-md cursor-pointer"
+            className="flex items-center justify-between border border-primary rounded-md py-10 md:p-3 bg-[#fbe9f1] hover:bg-[#fbe9f1] transition shadow-md cursor-pointer"
             onClick={() => router.push("/quiz")}
           >
             <h3 className="text-lg font-bold text-primary flex-1 text-center">
@@ -50,7 +50,7 @@ export default function EarningSection() {
 
         {/* Refer a Friend */}
         <div>
-          <div className="flex items-center justify-between border border-[#E95C2B] rounded-2xl py-10 md:p-3 bg-[#fdefea] hover:bg-[#fdefea] transition shadow-md cursor-pointer">
+          <div className="flex items-center justify-between border border-[#E95C2B] rounded-md py-10 md:p-3 bg-[#fdefea] hover:bg-[#fdefea] transition shadow-md cursor-pointer">
             <h3 className="text-lg font-bold text-[#E95C2B] flex-1 text-center">
               Refer a Friend
             </h3>
