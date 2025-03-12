@@ -15,7 +15,7 @@ const AuthModal: React.FC<ModalProps> = ({ isOpen, onClose, login }) => {
       <div className="bg-white p-12 rounded-2xl shadow-lg max-w-sm w-full text-center relative">
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-600 hover:text-black"
+          className="absolute top-4 right-4 text-black  hover:text-black text-lg"
         >
           &#10005;
         </button>
@@ -23,15 +23,15 @@ const AuthModal: React.FC<ModalProps> = ({ isOpen, onClose, login }) => {
           Please log in to get started.
         </h2>
         <button
-          className="w-full  mt-6 bg-primary text-white font-bold py-2 rounded-full shadow-md hover:bg-primary"
+          className="w-full text-sm  mt-6 bg-primary text-white font-bold py-4 rounded-full shadow-md hover:bg-primary"
           onClick={login}
         >
           LOGIN
         </button>
-        <p className="mt-10 text-black font-semibold ">
+        <p className="mt-10 text-lg text-black font-semibold ">
           Don't have an account?
         </p>
-        <button className="w-full mt-4 border border-primary text-primary font-bold py-2 rounded-full shadow-md hover:bg-pink-100">
+        <button className="w-full mt-4 border border-primary text-primary font-bold py-4 text-sm rounded-full shadow-md hover:bg-pink-100">
           SIGNUP
         </button>
       </div>

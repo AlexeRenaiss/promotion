@@ -9,13 +9,19 @@ export default function EarningSection() {
         {/* Complete Your Profile */}
         <div>
           <div
-            className="flex-1 border border-blue-500 rounded-md p-3 bg-blue-50 hover:bg-blue-100 transition shadow-md cursor-pointer"
+            className="flex items-center justify-between border border-[#3C6DCC] rounded-md py-10 md:p-3 bg-[#ebf0fa] hover:bg-[blue-100] transition shadow-md cursor-pointer"
             onClick={() => router.push("/reward")}
           >
-            <h3 className="text-lg font-bold text-blue-600 flex items-center justify-center">
-              Complete Your Profile <span className="ml-8">&gt;</span>
+            <h3 className="text-lg font-bold text-[#3C6DCC] flex-1 text-center">
+              Complete Your Profile
             </h3>
+            <img
+              src="/images/blue.svg"
+              alt="Arrow"
+              className="mr-4 w-4 h-4 md:w-3 md:h-3"
+            />
           </div>
+
           <p className="text-black mt-4">
             Earn 25 points + 1 sweepstakes entry when you complete your profile
           </p>
@@ -24,12 +30,17 @@ export default function EarningSection() {
         {/* Take a Quiz */}
         <div>
           <div
-            className="flex-1 border border-primary rounded-md p-3 bg-pink-50 hover:bg-pink-100 transition shadow-md"
+            className="flex items-center justify-between border border-primary rounded-md py-10 md:p-3 bg-[#fbe9f1] hover:bg-[#fbe9f1] transition shadow-md cursor-pointer"
             onClick={() => router.push("/quiz")}
           >
-            <h3 className="text-lg font-bold text-primary flex items-center justify-center">
-              Take a Quiz <span className="ml-8">&gt;</span>
+            <h3 className="text-lg font-bold text-primary flex-1 text-center">
+              Take a Quiz
             </h3>
+            <img
+              src="/images/red.svg"
+              alt="Arrow"
+              className="mr-4 w-4 h-4 md:w-3 md:h-3"
+            />
           </div>
           <p className="text-black mt-4">
             Earn 25 points for each additional quiz you take + learn more about
@@ -39,10 +50,15 @@ export default function EarningSection() {
 
         {/* Refer a Friend */}
         <div>
-          <div className="flex-1 border border-orange-300 rounded-md p-3 bg-orange-50 hover:bg-orange-100 transition shadow-md">
-            <h3 className="text-lg font-bold text-orange-600 flex items-center justify-center">
-              Refer a Friend <span className="ml-8">&gt;</span>
+          <div className="flex items-center justify-between border border-[#E95C2B] rounded-md py-10 md:p-3 bg-[#fdefea] hover:bg-[#fdefea] transition shadow-md cursor-pointer">
+            <h3 className="text-lg font-bold text-[#E95C2B] flex-1 text-center">
+              Refer a Friend
             </h3>
+            <img
+              src="/images/orange.svg"
+              alt="Arrow"
+              className="mr-4 w-4 h-4 md:w-3 md:h-3"
+            />
           </div>
           <p className="text-black mt-4">
             Earn 25 points for each friend who signs up for the Loyalty Program!

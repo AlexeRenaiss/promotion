@@ -5,12 +5,14 @@ import { UserCircle, User } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const pathname = usePathname();
   const profileDropdownRef = useRef(null);
+  const [user, setUser] = useState(false);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -27,6 +29,13 @@ export default function Navbar() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
+  }, []);
+
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      setUser(true);
+    }
   }, []);
   const handleLogout = () => {
     localStorage.removeItem("user");
@@ -119,44 +128,49 @@ export default function Navbar() {
           </div>
 
           {/* User Profile with dropdown */}
-          <div className="relative" ref={profileDropdownRef}>
-            <div
-              className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-2 space-y-1 sm:space-y-0 font-medium cursor-pointer"
-              onClick={() => setIsProfileOpen(!isProfileOpen)}
-            >
-              <UserCircle className="h-6 w-8 text-black pr-1 sm:pr-0" />
-              <span className="text-black text-[10px] sm:text-sm">John</span>
-            </div>
-
-            {/* Profile Dropdown */}
-            {isProfileOpen && (
+          {user ? (
+            <div className="relative" ref={profileDropdownRef}>
               <div
-                className="absolute  min-w-56 -top-7 right-0 mt-2 bg-white rounded-lg shadow-lg py-2 z-50 border border-gray-100 transition-all duration-300 ease-in-out 
-               animate-fadeIn "
+                className="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-2 space-y-1 sm:space-y-0 font-medium cursor-pointer"
+                onClick={() => setIsProfileOpen(!isProfileOpen)}
               >
-                <div className="px-4 py-3 border-b border-gray-100">
-                  <div className="flex items-center justify-end ">
-                    <div className="text-center text-black font-semibold text-lg mt-1">
-                      John
+                <UserCircle className="h-6 w-8 text-black pr-1 sm:pr-0" />
+                <span className="text-black text-[10px] sm:text-sm">John</span>
+              </div>
+
+              {isProfileOpen && (
+                <div
+                  className="absolute  min-w-56 -top-7 right-0 mt-2 bg-white rounded-lg shadow-lg py-2 z-50 border border-gray-100 transition-all duration-300 ease-in-out 
+                animate-fadeIn "
+                >
+                  <div className="px-4 py-3 border-b border-gray-100">
+                    <div className="flex items-center justify-end ">
+                      <div className="text-center text-blue font-semibold  mt-1">
+                        John
+                      </div>
+                      <UserCircle className="h-6 w-8 text-black pr-1 sm:pr-0" />
                     </div>
-                    <UserCircle className="h-6 w-8 text-black pr-1 sm:pr-0" />
+                  </div>
+                  <Link
+                    href="/account"
+                    className="block px-4 py-3 text-blue hover:bg-gray-50  font-medium"
+                  >
+                    My Account
+                  </Link>
+                  <div
+                    className="block px-4 py-1 text-black hover:bg-gray-50  font-medium cursor-pointer"
+                    onClick={handleLogout}
+                  >
+                    Sign Out
                   </div>
                 </div>
-                <Link
-                  href="/account"
-                  className="block px-4 py-3 text-black hover:bg-gray-50 text-lg font-medium"
-                >
-                  My Account
-                </Link>
-                <div
-                  className="block px-4 py-1 text-black hover:bg-gray-50 text-lg font-medium cursor-pointer"
-                  onClick={handleLogout}
-                >
-                  Sign Out
-                </div>
-              </div>
-            )}
-          </div>
+              )}
+            </div>
+          ) : (
+            <Button className="text-white rounded-full px-4 md:px-10 font-bold">
+              Login
+            </Button>
+          )}
         </div>
       </div>
 

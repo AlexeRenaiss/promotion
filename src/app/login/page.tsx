@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 import Footer from "../../components/Footer";
 import { useRouter } from "next/navigation";
 import ExitModal from "../../components/ExitModal";
+import Image from "next/image";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -23,8 +24,8 @@ export default function LoginPage() {
     router.push("/");
   };
   return (
-    <div className="flex items-center justify-center  min-h-screen bg-gray-50 ">
-      <div className="w-full max-w-md p-8 bg-white rounded-2xl shadow-lg relative">
+    <div className="flex items-center justify-center  min-h-screen bg-[#f4f7fc] ">
+      <div className="w-full max-w-md m-4 p-8 bg-white rounded-3xl shadow-lg relative">
         {/* Close button */}
         <button
           className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
@@ -35,16 +36,21 @@ export default function LoginPage() {
 
         {/* Logo */}
         <div className="flex justify-center mb-8">
-          <div className="text-3xl font-bold">
-            <span className="text-black">Beauty</span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-orange-400 to-teal-500">
-              Code
-            </span>
+          <div className="relative w-48 h-12">
+            {" "}
+            {/* Adjust width & height as needed */}
+            <Image
+              src="/images/logo.svg" // Replace with your actual logo path
+              alt="Beauty Code Logo"
+              layout="fill"
+              objectFit="contain"
+              priority
+            />
           </div>
         </div>
 
         {/* Heading */}
-        <h1 className="text-2xl font-bold text-center text-black mb-8">
+        <h1 className="text-xl md:text-2xl font-bold text-center text-[#171D52] mb-8">
           Please log in to get started
         </h1>
 
@@ -85,8 +91,12 @@ export default function LoginPage() {
 
           {/* reCAPTCHA */}
           <div className="mb-6">
-            <div className="border border-gray-200 rounded p-3 flex items-center">
-              <input type="checkbox" id="recaptcha" className="mr-2" />
+            <div className="border border-gray-200 rounded-lg p-3 flex items-center">
+              <input
+                type="checkbox"
+                id="recaptcha"
+                className="mr-3 w-3 h-3 accent-blue-500 scale-150"
+              />
               <label htmlFor="recaptcha" className="text-gray-700 text-sm">
                 I'm not a robot
               </label>
