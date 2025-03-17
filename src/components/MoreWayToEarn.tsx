@@ -76,30 +76,34 @@ export default function MoreWayToEarn({ title }) {
   };
 
   return (
-    <div className="mx-auto px-4 py-16 bg-white w-full">
+    <div className="mx-auto px-3 mob:px-4 tab:px-6 py-12 mob:py-16 bg-white w-full">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-8 text-black ">
-          <h2 className="text-2xl  mb-2 font-bold"> {title}</h2>
+        {/* Title Section */}
+        <div className="text-center mb-6 mob:mb-8 text-black">
+          <h2 className="text-xl mob:text-2xl mb-1 mob:mb-2 font-bold">
+            {title}
+          </h2>
           <p className="font-extralight">
             Earn points with each one of these quick quizzes.
           </p>
         </div>
 
+        {/* Quiz Cards Grid */}
         <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-500 ease-in-out">
+          <div className="grid grid-cols-1 mob:grid-cols-1 tab:grid-cols-2 smDesktop:grid-cols-3 gap-4 mob:gap-6 transition-all duration-500 ease-in-out">
             {getVisibleCards().map((card, index) => (
               <div
                 key={card.id}
                 className={`bg-white rounded-lg shadow-lg overflow-hidden 
-                  ${
-                    isTransitioning
-                      ? "opacity-0 transform translate-x-6"
-                      : "opacity-100 transform translate-x-0"
-                  }
-                  transition-all duration-300 ease-in-out`}
+                ${
+                  isTransitioning
+                    ? "opacity-0 transform translate-x-6"
+                    : "opacity-100 transform translate-x-0"
+                }
+                transition-all duration-300 ease-in-out`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="h-56 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
+                <div className="h-44 mob:h-56 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
                   <Image
                     src={card.image}
                     alt="Quiz Image"
@@ -115,12 +119,11 @@ export default function MoreWayToEarn({ title }) {
             ))}
           </div>
 
-          {/* Navigation Arrows */}
-          {/* Navigation Arrows - Hide on mobile */}
+          {/* Navigation Arrows - Only show on tablets and larger screens */}
           {currentIndex > 0 && (
             <button
               onClick={handlePrevious}
-              className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden md:block"
+              className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden tab:block"
               aria-label="Previous image"
               disabled={isTransitioning}
             >
@@ -131,27 +134,13 @@ export default function MoreWayToEarn({ title }) {
           {currentIndex < quizCards.length - 1 && (
             <button
               onClick={handleNext}
-              className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden md:block"
+              className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden tab:block"
               aria-label="Next image"
               disabled={isTransitioning}
             >
               <ChevronRight className="w-6 h-6 text-black" />
             </button>
           )}
-
-          {/* Indicators */}
-          {/* <div className="mt-6 flex justify-center">
-            {quizCards.map((_, index) => (
-              <button
-                key={index}
-                className={`h-2 w-2 rounded-full mx-1 ${
-                  index === currentIndex ? "bg-blue-500" : "bg-gray-300"
-                }`}
-                onClick={() => setCurrentIndex(index)}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div> */}
         </div>
       </div>
     </div>
