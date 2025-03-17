@@ -25,7 +25,7 @@ export default function HeroSection({
       <div
         className="relative mt-6 bg-white shadow-lg rounded-xl p-6 tab:p-8 
                  justify-center flex flex-col items-center 
-                 w-11/12 sm:w-4/5 sm:max-w-2xl smDesktop:max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6 tab:px-8 
+                 w-11/12 sm:w-4/5 sm:max-w-2xl smDesktop:max-w-7xl lg:max-w-7xl mx-auto px-4 sm:px-6 tab:px-8 
                  min-h-[300px] tab:min-h-[320px]"
       >
         {/* Background Image - Improved implementation for tablet */}
@@ -46,7 +46,7 @@ export default function HeroSection({
               Points History
             </p>
           )}
-          <p className="text-3xl tab:text-5xl font-bold ">25</p>
+          <p className="text-4xl tab:text-5xl font-bold ">25</p>
 
           {balanceStatus && (
             <p className="mt-2">You have 25 points ready to be redeemed.</p>

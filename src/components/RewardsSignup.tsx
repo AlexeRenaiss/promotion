@@ -45,11 +45,12 @@ const RewardsSignup: React.FC = () => {
       </div>
 
       {/* Text Content - Below in Mobile, Left in Desktop */}
-      <div className="w-full mob:text-center tab:w-1/2 tab:text-left p-6 mob:p-8 tab:p-10 smDesktop:p-12">
+      {/* <div className="w-full mob:text-center tab:w-1/2 tab:text-left p-6 mob:p-8 tab:p-10 smDesktop:p-12"> */}
+      <div className="w-full mob:text-center tab:w-1/2 tab:text-left p-6 mob:p-8 tab:p-10 smDesktop:p-12 px-6 mob:px-8 tab:px-10 smDesktop:px-12">
         <h1 className="text-xl mob:text-2xl tab:text-3xl smDesktop:text-4xl font-bold text-black">
           Your rewards and savings start here.
         </h1>
-        <p className="mt-3 mob:mt-4 text-black">
+        <p className="text-xl mt-4  text-black">
           Sign up today and start earning points for gift cards, beauty gift
           baskets, digital discounts, and more!
         </p>

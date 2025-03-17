@@ -167,7 +167,7 @@ export default function Navbar() {
           ) : (
             <div className="sm:block hidden">
               <Button
-                className="text-white rounded-full px-4 md:px-16 font-bold"
+                className="text-white rounded-full  px-16 font-bold"
                 onClick={() => (window.location.href = "/login")}
               >
                 Login
