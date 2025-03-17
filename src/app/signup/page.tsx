@@ -28,7 +28,7 @@ export default function SignUpPage() {
   };
 
   return (
-    <div className="bg-[#f4f7fc] py-4">
+    <div className="bg-[#f4f7fc] min-h-screen py-4">
       {/* Back Button */}
 
       <div className="p-4">

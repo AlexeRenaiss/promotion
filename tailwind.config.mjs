@@ -22,8 +22,8 @@ module.exports = {
         secondary: "#D92373",
         tertiary: "#f23084",
         white: "#FFFFFF",
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // background: "var(--background)",
+        // foreground: "var(--foreground)",
       },
       fontFamily: {
         avenirnextbold: ["avenirnextbold", "sans-serif"],
