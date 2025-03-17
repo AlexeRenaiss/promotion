@@ -37,17 +37,17 @@ const Hero = () => {
           src="/images/banner.png"
           alt="Beauty Code Loyalty Program"
           fill
-          sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 50vw"
+          sizes="(max-width: 767px) 100vw, (max-width: 1024px) 100vw, 100vw"
           priority
         />
       </div>
 
       {/* Right: Text Content */}
       <div className="w-full mob:text-center tab:w-1/2 tab:text-left p-8 tab:p-6 smDesktop:p-16">
-        <h1 className="text-xl mob:text-2xl tab:text-3xl smDesktop:text-4xl font-bold text-black">
+        <h1 className="text-xl mob:text-2xl tab:text-2xl smDesktop:text-4xl font-bold text-black mt-2">
           Join the Exclusive Beauty Code Loyalty Program!
         </h1>
-        <p className="mt-3 mob:mt-4 text-black text-lg leading-relaxed">
+        <p className="my-3 mob:mt-4 text-black text-lg tab:text-lg leading-relaxed">
           Elevate your beauty experience and enjoy the perks of being part of an
           elite community that celebrates your passion for all things beautiful!
           Sign up today and let the pampering begin!

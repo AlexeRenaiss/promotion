@@ -24,9 +24,9 @@ export default function HeroSection({
       {/* Full-Width Card with Consistent Spacing Across Devices */}
       <div
         className="relative mt-6 bg-white shadow-lg rounded-xl p-6 tab:p-8 
-                 justify-center flex flex-col items-center 
-                 w-11/12 sm:w-4/5 sm:max-w-2xl smDesktop:max-w-7xl lg:max-w-7xl mx-auto px-4 sm:px-6 tab:px-8 
-                 min-h-[300px] tab:min-h-[320px]"
+             justify-center flex flex-col items-center 
+             w-11/12 sm:w-4/5 sm:max-w-2xl smDesktop:max-w-7xl lg:max-w-7xl mx-auto px-4 sm:px-6 tab:px-8 
+             tab:w-4/5 tab:max-w-5xl min-h-[300px] tab:min-h-[320px]"
       >
         {/* Background Image - Improved implementation for tablet */}
         <div
