@@ -47,10 +47,10 @@ const RewardsSignup: React.FC = () => {
       {/* Text Content - Below in Mobile, Left in Desktop */}
       {/* <div className="w-full mob:text-center tab:w-1/2 tab:text-left p-6 mob:p-8 tab:p-10 smDesktop:p-12"> */}
       <div className="w-full mob:text-center tab:w-1/2 tab:text-left p-6 mob:p-8 tab:p-10 smDesktop:p-12 px-6 mob:px-8 tab:px-10 smDesktop:px-12">
-        <h1 className="text-xl mob:text-2xl tab:text-3xl smDesktop:text-4xl font-bold text-black">
+        <h1 className="text-xl mob:text-2xl tab:text-2xl smDesktop:text-4xl font-bold text-black mt-2">
           Your rewards and savings start here.
         </h1>
-        <p className="text-xl mt-4  text-black">
+        <p className="text-xl mt-4 tab:text-lg  text-black">
           Sign up today and start earning points for gift cards, beauty gift
           baskets, digital discounts, and more!
         </p>
@@ -59,7 +59,7 @@ const RewardsSignup: React.FC = () => {
           <>
             <button
               type="submit"
-              className="text-sm mt-4 mob:mt-6 w-full max-w-sm py-3 mob:py-4 bg-primary text-white font-bold rounded-full hover:bg-primary transition-colors"
+              className="text-sm mt-8 mob:mt-6 w-full max-w-sm py-3 mob:py-4 bg-primary text-white font-bold rounded-full hover:bg-primary transition-colors"
               onClick={handleJoinNow}
             >
               SIGN UP NOW
