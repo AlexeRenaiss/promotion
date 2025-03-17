@@ -19,7 +19,7 @@ export default function HeroSection({
       <h2 className="text-3xl tab:text-3xl font-bold mt-14 mb-4">{title}</h2>
 
       {/* Light Background to Keep the Bottom Cut Effect */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gray-100"></div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-[#f5f7fb]"></div>
 
       {/* Full-Width Card with Consistent Spacing Across Devices */}
       <div
