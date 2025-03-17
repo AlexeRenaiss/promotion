@@ -11,7 +11,7 @@ export default function EarningSection() {
         {/* Complete Your Profile */}
         <div className="w-full mob:w-full tab:w-1/3">
           <div
-            className="flex items-center justify-between border border-[#3C6DCC] rounded-md py-4 mob:py-10 tab:p-3 bg-[#ebf0fa] hover:bg-[blue-100] transition shadow-md cursor-pointer"
+            className="flex  items-center justify-between border border-[#3C6DCC] rounded-md py-4 mob:py-10 tab:p-3 bg-[#ebf0fa] hover:bg-[blue-100] transition shadow-md cursor-pointer"
             onClick={() => router.push("/reward")}
           >
             <h3 className="text-md mob:text-lg font-bold text-[#3C6DCC] flex-1 text-center">
@@ -23,7 +23,7 @@ export default function EarningSection() {
               className="mr-2 mob:mr-4 w-3 mob:w-4 h-3 mob:h-4"
             />
           </div>
-          <p className="text-black mt-3 mob:mt-4">
+          <p className="text-black mt-4">
             Earn 25 points + 1 sweepstakes entry when you complete your profile
           </p>
         </div>
