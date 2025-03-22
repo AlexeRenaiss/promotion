@@ -39,7 +39,6 @@ export default function MoreWayToEarn({ title }) {
   ];
 
   const [isTransitioning, setIsTransitioning] = useState(false);
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerSlide, setItemsPerSlide] = useState(3); // Default for desktop
   const [isMobile, setIsMobile] = useState(false);
@@ -48,14 +47,17 @@ export default function MoreWayToEarn({ title }) {
   useEffect(() => {
     const updateItemsPerSlide = () => {
       const screenWidth = window.innerWidth;
-      if (screenWidth >= 1024) {
-        setItemsPerSlide(3); // Desktop: 3 cards per slide
+      if (screenWidth >= 1280) {
+        setItemsPerSlide(3); // Desktop (1280px and above)
+        setIsMobile(false);
+      } else if (screenWidth >= 1024) {
+        setItemsPerSlide(2); // iPad Pro (1024px)
         setIsMobile(false);
       } else if (screenWidth >= 768) {
-        setItemsPerSlide(2); // Tablet: 2 cards per slide
+        setItemsPerSlide(2); // Tablet (768px - 1023px)
         setIsMobile(false);
       } else {
-        setItemsPerSlide(1); // Mobile: 1 card per slide
+        setItemsPerSlide(1); // Mobile (below 768px)
         setIsMobile(true);
       }
     };
@@ -89,14 +91,9 @@ export default function MoreWayToEarn({ title }) {
   };
 
   const getVisibleCards = () => {
-    // On mobile, return all cards
-    if (isMobile) {
-      return quizCards;
-    }
+    if (isMobile) return quizCards;
 
-    // For tablet and desktop, show paginated cards
     if (currentIndex === lastSlideIndex) {
-      // Modified to wrap around to the beginning
       const remainingCards = quizCards.length - currentIndex * itemsPerSlide;
       const cardsFromEnd = quizCards.slice(currentIndex * itemsPerSlide);
       const cardsFromBeginning = quizCards.slice(
@@ -131,13 +128,11 @@ export default function MoreWayToEarn({ title }) {
             {getVisibleCards().map((card, index) => (
               <div
                 key={card.id}
-                className={`bg-white rounded-lg shadow-lg overflow-hidden 
-              ${
-                isTransitioning
-                  ? "opacity-0 transform translate-x-6"
-                  : "opacity-100 transform translate-x-0"
-              }
-              transition-all duration-300 ease-in-out`}
+                className={`bg-white rounded-lg shadow-lg overflow-hidden ${
+                  isTransitioning
+                    ? "opacity-0 transform translate-x-6"
+                    : "opacity-100 transform translate-x-0"
+                } transition-all duration-300 ease-in-out`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="h-44 mob:h-56 bg-blue-500 relative m-2 rounded-lg overflow-hidden">
@@ -156,13 +151,10 @@ export default function MoreWayToEarn({ title }) {
             ))}
           </div>
 
-          {/* Navigation Arrows - Only visible on tablet and desktop */}
           {!isMobile && currentIndex > 0 && (
             <button
               onClick={handlePrevious}
-              className="absolute left-2 smDesktop:-left-6 top-1/2 transform -translate-y-1/2 
-              bg-white rounded-full p-3 shadow-md transition-all hover:bg-gray-100 focus:outline-none 
-              focus:ring-2 focus:ring-blue-500 hidden tab:block smDesktop:block"
+              className="absolute left-2 smDesktop:-left-6 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-md transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden tab:block smDesktop:block"
             >
               <ChevronLeft className="w-6 h-6 text-black" />
             </button>
@@ -171,9 +163,7 @@ export default function MoreWayToEarn({ title }) {
           {!isMobile && currentIndex < lastSlideIndex && (
             <button
               onClick={handleNext}
-              className="absolute right-2 smDesktop:-right-6 top-1/2 transform -translate-y-1/2 
-              bg-white rounded-full p-3 shadow-md transition-all hover:bg-gray-100 focus:outline-none 
-              focus:ring-2 focus:ring-blue-500 hidden tab:block smDesktop:block"
+              className="absolute right-2 smDesktop:-right-6 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-md transition-all hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden tab:block smDesktop:block"
             >
               <ChevronRight className="w-6 h-6 text-black" />
             </button>
